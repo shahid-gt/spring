@@ -3,6 +3,7 @@ package com.springmvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,17 @@ public class HomeController {
         studentNames.add("Maajid");
         studentNames.add("Raashid");
         model.addAttribute("students", studentNames);
+
+
         return "details";
+    }
+
+    @RequestMapping("/help")
+    public ModelAndView help() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("info", "HelpPageInformation");
+        modelAndView.setViewName("help");
+        return modelAndView;
     }
 
 }
