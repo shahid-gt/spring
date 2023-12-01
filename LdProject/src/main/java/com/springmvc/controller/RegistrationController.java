@@ -1,6 +1,9 @@
 package com.springmvc.controller;
 
+import com.springmvc.model.User;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,11 +19,11 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/processform", method = RequestMethod.POST)
-    public ModelAndView handleForm(@RequestParam("email") String userEmail, @RequestParam("password") String userPassword) {
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("email", userEmail);
-        mv.addObject("password", userPassword);
-        mv.setViewName("success");
-        return mv;
+    public String handleForm(@ModelAttribute User user) {
+//        ModelAndView mv = new ModelAndView();
+//        mv.addObject("email", userEmail);
+//        mv.addObject("password", userPassword);
+//        mv.setViewName("success");
+        return "success";
     }
 }
