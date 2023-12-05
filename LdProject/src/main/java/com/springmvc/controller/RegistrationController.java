@@ -19,11 +19,7 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/processform", method = RequestMethod.POST)
-    public String handleForm(@ModelAttribute User user) {
-//        ModelAndView mv = new ModelAndView();
-//        mv.addObject("email", userEmail);
-//        mv.addObject("password", userPassword);
-//        mv.setViewName("success");
+    public String handleForm(@ModelAttribute("user") User user) {
         return "success";
     }
 }

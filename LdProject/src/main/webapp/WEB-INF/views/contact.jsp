@@ -11,9 +11,8 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
 
-    <form action="processform" method="post" >
+    <form action="processform" method="post" modelattribute="user" >
         <div class="container">
           <div class="form-group">
             <label for="userNameHelp">User name</label>
