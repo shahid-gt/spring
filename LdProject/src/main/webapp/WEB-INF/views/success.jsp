@@ -4,7 +4,7 @@
 <head> </head>
 <body>
 
-<h2> Username Is: ${user.userName} </h2>
+<h2> Username Is: ${user.username} </h2>
 <h2> Email Is: ${user.email} </h2>
 <h2> Password Is: ${user.password} </h2>
 

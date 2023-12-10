@@ -16,7 +16,7 @@
         <div class="container">
           <div class="form-group">
             <label for="userNameHelp">User name</label>
-            <input type="text" name="userName" class="form-control" id="exampleInputUsername" aria-describedby="userNameHelp">
+            <input type="text" name="username" class="form-control" id="exampleInputUsername" aria-describedby="userNameHelp">
             <small id="userNameHelp" class="form-text text-muted">We'll never share your user name with anyone else.</small>
           </div>
           <div class="form-group">
