@@ -13,6 +13,10 @@
 http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <!-- Managing static resources using mvc tag -->
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+
     <!-- IMPORTANT: Enable Spring's component scanning -->
     <context:component-scan base-package="com.springmvc"/>
 
