@@ -15,19 +15,16 @@ public class User {
     private String email;
     @Column(name = "password")
     private String password;
-    @Column(name = "mobile")
-    private Long mobile;
 
     public User() {
     }
 
-    public User(Long id, String username, String email, String password, Long mobile) {
+    public User(Long id, String username, String email, String password) {
         super();
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.mobile = mobile;
     }
 
     public String getUsername() {
@@ -54,16 +51,8 @@ public class User {
         this.password = password;
     }
 
-    public void setMobile(Long mobile) {
-        this.mobile = mobile;
-    }
-
-    public Long getMobile() {
-        return mobile;
-    }
-
     @Override
     public String toString() {
-        return "User{ username= " + username + " email= " + email + " password= " + password + " mobile= " + mobile;
+        return "User{ username= " + username + " email= " + email + " password= " + password;
     }
 }
