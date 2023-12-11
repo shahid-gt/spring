@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<!Doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -14,6 +15,11 @@
 
     <form action="processform" method="post" modelattribute="user" >
         <div class="container">
+
+          <div class="alert alert-danger" role="alert">
+            <f:errors path="user.*" />
+          </div>
+
           <div class="form-group">
             <label for="userNameHelp">User name</label>
             <input type="text" name="username" class="form-control" id="exampleInputUsername" aria-describedby="userNameHelp">
@@ -27,6 +33,10 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="text" name="mobile" class="form-control" id="mobileNumber"/>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>

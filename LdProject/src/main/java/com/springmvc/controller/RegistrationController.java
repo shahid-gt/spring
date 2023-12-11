@@ -4,6 +4,7 @@ import com.springmvc.entities.User;
 import com.springmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,7 +22,8 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/processform", method = RequestMethod.POST)
-    public String handleForm(@ModelAttribute("user") User user) {
+    public String handleForm(@ModelAttribute("user") User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) return "contact";
         System.out.println("In Controller" + user);
         userRegistrationService.createUser(user);
         return "success";
