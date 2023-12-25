@@ -30,6 +30,10 @@ public class User {
         this.mobile = mobile;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -40,6 +44,10 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setId(Long Id) {
+        this.id = Id;
     }
 
     public void setUsername(String username) {
